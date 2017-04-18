@@ -15,7 +15,6 @@ function displayBikes(city, bikeData, user_date_unix_1, user_date_unix_2) {
       img_result = "<img src='" + bikeData.bikes[i].thumb + "' alt='A stolen " + bikeData.bikes[i].title + "'>";
     }
 
-    console.log((user_date_unix_1 <= bikeData.bikes[i].date_stolen) && (user_date_unix_2 >= bikeData.bikes[i].date_stolen));
     if ((user_date_unix_1 <= bikeData.bikes[i].date_stolen) && (user_date_unix_2 >= bikeData.bikes[i].date_stolen)) {
       $("#results").append(
         "<tr>" +
